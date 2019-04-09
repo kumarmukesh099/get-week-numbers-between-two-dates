@@ -1,0 +1,16 @@
+var arr = [];
+  Date.prototype.getWeek = function() {
+    var onejan = new Date(this.getFullYear(), 0, 1);
+    return Math.ceil((((this - onejan) / 86400000) + onejan.getDay() + 0)/7);
+  };
+  var popq,popp;
+  popq = new Date("2019-01-06").getWeek();
+ arr.push(popq);
+ popp = new Date("2019-01-19").getWeek();
+ arr.push(popp);
+var list = [];
+for (var i = popq; i <= popp; i++) {
+    list.push(i);
+}
+console.log("weeks" , list)
+
